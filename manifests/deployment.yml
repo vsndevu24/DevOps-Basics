@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vsndevudevopsbasics 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vsndevudevopsbasics
+  template:
+    metadata:
+      labels:
+        app: vsndevudevopsbasics 
+    spec:
+      containers:
+        - name: vsndevudevopsbasics 
+          image: azurelab2.azurecr.io/vsndevudevopsbasics
+          ports:
+          - containerPort: 80
